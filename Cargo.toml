@@ -1,0 +1,25 @@
+Cargo.toml
+```toml
+[package]
+name = "ledger-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+uuid = { version = "1.8", features = ["serde", "v4"] }
+chrono = { version = "0.4", features = ["serde"] }
+rust_decimal = "1.33"
+thiserror = "1.0"
+tracing = "0.1"
+sqlx = { version = "0.7", features = ["postgres", "runtime-tokio-native-tls"] }
+tokio = { version = "1.0", features = ["full"] }
+async-trait = "0.1"
+bincode = "1.3"
+
+[dev-dependencies]
+tokio = { version = "1.0", features = ["full"] }
+testcontainers = "0.15"
+testcontainers-postgres = "0.15"
+```
